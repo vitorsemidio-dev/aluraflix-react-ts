@@ -35,3 +35,15 @@ export const Logo = styled.img`
     }
   }
 `;
+
+export const Body = styled.body`
+  --bodyPaddingTop: 94px;
+  padding-top: var(--bodyPaddingTop);
+
+  @media (max-width: 800px) {
+    & {
+      --bodyPaddingTop: 40px;
+      padding-top: var(--bodyPaddingTop);
+    }
+  }
+`;
