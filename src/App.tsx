@@ -1,7 +1,13 @@
 import React from 'react';
+import Menu from './components/Menu';
 
-function App() {
-  return <div className="App">AluraFlix</div>;
-}
+const App: React.FC = () => {
+  return (
+    <>
+      <div className="App">AluraFlix</div>
+      <Menu />
+    </>
+  );
+};
 
 export default App;
