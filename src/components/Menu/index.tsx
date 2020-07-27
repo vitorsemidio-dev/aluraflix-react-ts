@@ -14,9 +14,7 @@ const Menu: React.FC = () => {
           <img className="Logo" src={logo} alt="AluraFlix logo" />
         </a>
 
-        <ButtonLink className="ButtonLink" href="/link">
-          Link Children
-        </ButtonLink>
+        <ButtonLink href="/link">Link Children dkldaslkj</ButtonLink>
       </nav>
     </>
   );

@@ -1,16 +1,13 @@
 import React from 'react';
 
+import { Button } from './styles';
+
 interface Props {
-  className: string;
   href: string;
 }
 
-const ButtonLink: React.FC<Props> = ({ className, href, children }) => {
-  return (
-    <a className={className} href={href}>
-      {children}
-    </a>
-  );
+const ButtonLink: React.FC<Props> = ({ href, children }) => {
+  return <Button href={href}>{children}</Button>;
 };
 
 export default ButtonLink;
