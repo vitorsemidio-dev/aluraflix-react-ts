@@ -1,17 +1,10 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import {
   BannerMainContainer,
   ContentAreaContainer,
   WatchButton,
 } from './styles';
-
-function getYouTubeId(youtubeURL) {
-  return youtubeURL.replace(
-    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
-    '$7',
-  );
-}
 
 interface Props {
   videoTitle: string;
@@ -20,7 +13,17 @@ interface Props {
 }
 
 const BannerMain: React.FC<Props> = ({ videoTitle, videoDescription, url }) => {
-  const youTubeID = getYouTubeId(url);
+  const getYouTubeId = useCallback(
+    (youtubeURL: string) => {
+      return youtubeURL.replace(
+        /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
+        '$7',
+      );
+    },
+    [url],
+  );
+
+  const youTubeID = useMemo(() => getYouTubeId(url), [url]);
   const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
 
   return (
