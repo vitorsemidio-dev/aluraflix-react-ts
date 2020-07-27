@@ -11,6 +11,10 @@ const Menu: React.FC = () => {
         <a href="/">
           <img className="Logo" src={logo} alt="AluraFlix logo" />
         </a>
+
+        <a className="ButtonLink" href="/">
+          Novo Video
+        </a>
       </nav>
     </>
   );
