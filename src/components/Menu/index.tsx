@@ -8,7 +8,7 @@ const Menu: React.FC = () => {
   return (
     <>
       <nav>Alura Flix Menu</nav>
-      <img className="logo" src={logo} alt="AluraFlix logo" />
+      <img className="Logo" src={logo} alt="AluraFlix logo" />
     </>
   );
 };
