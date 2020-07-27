@@ -7,8 +7,11 @@ import logo from '../../assets/LogoMain.png';
 const Menu: React.FC = () => {
   return (
     <>
-      <nav>Alura Flix Menu</nav>
-      <img className="Logo" src={logo} alt="AluraFlix logo" />
+      <nav className="Menu">
+        <a href="/">
+          <img className="Logo" src={logo} alt="AluraFlix logo" />
+        </a>
+      </nav>
     </>
   );
 };
