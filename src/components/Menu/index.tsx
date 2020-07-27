@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ButtonLink from './ButtonLink';
+
 import './styles.css';
 
 import logo from '../../assets/LogoMain.png';
@@ -12,9 +14,7 @@ const Menu: React.FC = () => {
           <img className="Logo" src={logo} alt="AluraFlix logo" />
         </a>
 
-        <a className="ButtonLink" href="/">
-          Novo Video
-        </a>
+        <ButtonLink />
       </nav>
     </>
   );
