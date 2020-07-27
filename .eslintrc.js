@@ -4,8 +4,11 @@ module.exports = {
         "es6": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+      "airbnb",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint",
     ],
     "globals": {
         "Atomics": "readonly",
@@ -20,9 +23,29 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "@typescript-eslint"
+      "@typescript-eslint",
+      "prettier",
+      "react",
+      "react-hooks",
     ],
     "rules": {
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "prettier/prettier": "error",
+      "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
     }
 };
