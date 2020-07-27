@@ -4,18 +4,20 @@ import ButtonLink from './ButtonLink';
 
 import './styles.css';
 
+import { Logo, MenuContainer } from './styles';
+
 import logo from '../../assets/LogoMain.png';
 
 const Menu: React.FC = () => {
   return (
     <>
-      <nav className="Menu">
+      <MenuContainer className="Menu">
         <a href="/">
-          <img className="Logo" src={logo} alt="AluraFlix logo" />
+          <Logo className="Logo" src={logo} alt="AluraFlix logo" />
         </a>
 
         <ButtonLink href="/link">Styled Components Button</ButtonLink>
-      </nav>
+      </MenuContainer>
     </>
   );
 };
