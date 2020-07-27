@@ -1,9 +1,14 @@
 import React from 'react';
 
-const ButtonLink: React.FC = () => {
+interface Props {
+  className: string;
+  href: string;
+}
+
+const ButtonLink: React.FC<Props> = ({ className, href, children }) => {
   return (
-    <a className="ButtonLink" href="/">
-      Novo Video
+    <a className={className} href={href}>
+      {children}
     </a>
   );
 };
