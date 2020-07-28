@@ -1,17 +1,29 @@
 import React from 'react';
+
 import { VideoCardContainer } from './styles';
 
 function getYouTubeId(youtubeURL) {
-  return youtubeURL
-    .replace(
-      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
-      '$7',
-    );
+  return youtubeURL.replace(
+    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
+    '$7',
+  );
 }
 
+interface VideoCardProps {
+  videoTitle: string;
+  videoURL: string;
+  categoryColor: string;
+}
 
-function VideoCard({ videoTitle, videoURL, categoryColor }) {
-  const image = `https://img.youtube.com/vi/${getYouTubeId(videoURL)}/hqdefault.jpg`;
+const VideoCard: React.FC<VideoCardProps> = ({
+  videoTitle,
+  videoURL,
+  categoryColor,
+}) => {
+  const image = `https://img.youtube.com/vi/${getYouTubeId(
+    videoURL,
+  )}/hqdefault.jpg`;
+
   return (
     <VideoCardContainer
       url={image}
@@ -21,6 +33,6 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       title={videoTitle}
     />
   );
-}
+};
 
 export default VideoCard;
