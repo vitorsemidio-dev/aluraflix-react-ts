@@ -5,7 +5,9 @@ import PageDefault from '../../../components/PageDefault';
 const Video: React.FC = () => {
   return (
     <PageDefault>
-      <h1>Video</h1>
+      <div>
+        <span>hellow world</span>
+      </div>
     </PageDefault>
   );
 };
