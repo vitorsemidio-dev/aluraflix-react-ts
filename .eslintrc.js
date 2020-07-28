@@ -36,6 +36,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
+    'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
