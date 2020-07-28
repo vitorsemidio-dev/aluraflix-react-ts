@@ -29,6 +29,7 @@ module.exports = {
       "react-hooks",
     ],
     "rules": {
+      "camelcase": "off",
       "import/extensions": [
         "error",
         "ignorePackages",
