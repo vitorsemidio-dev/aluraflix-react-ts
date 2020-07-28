@@ -9,10 +9,26 @@ import {
   ExtraLink,
 } from './styles';
 
+interface Video {
+  titulo: string;
+  url: string;
+}
+
+interface LinkExtra {
+  text: string;
+  url: string;
+}
+
+interface Category {
+  titulo: string;
+  cor: string;
+  link_extra: LinkExtra;
+  videos: Video[];
+}
+
 interface VideoCardGroupProps {
   ignoreFirstVideo: boolean;
-  // TODO Tipagem Category
-  category: any;
+  category: Category;
 }
 
 const VideoCardGroup: React.FC<VideoCardGroupProps> = ({
