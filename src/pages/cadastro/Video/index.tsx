@@ -1,10 +1,14 @@
 import React from 'react';
 
+import PageDefault from '../../../components/PageDefault';
+
 const Video: React.FC = () => {
   return (
-    <div>
-      <h1>Video</h1>
-    </div>
+    <PageDefault>
+      <div>
+        <span>hellow world</span>
+      </div>
+    </PageDefault>
   );
 };
 
