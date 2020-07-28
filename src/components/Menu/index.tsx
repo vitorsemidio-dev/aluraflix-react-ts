@@ -4,7 +4,7 @@ import ButtonLink from './ButtonLink';
 
 import './styles.css';
 
-import { Logo, MenuContainer } from './styles';
+import { ButtonLinkHome, Logo, MenuContainer } from './styles';
 
 import logo from '../../assets/LogoMain.png';
 
@@ -12,11 +12,11 @@ const Menu: React.FC = () => {
   return (
     <>
       <MenuContainer className="Menu">
-        <a href="/">
+        <ButtonLinkHome to="/">
           <Logo className="Logo" src={logo} alt="AluraFlix logo" />
-        </a>
+        </ButtonLinkHome>
 
-        <ButtonLink href="/link">Novo Video</ButtonLink>
+        <ButtonLink to="/cadastro/video">Novo Video</ButtonLink>
       </MenuContainer>
     </>
   );
