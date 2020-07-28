@@ -16,17 +16,14 @@ interface Props {
 }
 
 const BannerMain: React.FC<Props> = ({ videoTitle, videoDescription, url }) => {
-  const getYouTubeId = useCallback(
-    (youtubeURL: string) => {
-      return youtubeURL.replace(
-        /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
-        '$7',
-      );
-    },
-    [url],
-  );
+  const getYouTubeId = useCallback((youtubeURL: string) => {
+    return youtubeURL.replace(
+      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
+      '$7',
+    );
+  }, []);
 
-  const youTubeID = useMemo(() => getYouTubeId(url), [url]);
+  const youTubeID = useMemo(() => getYouTubeId(url), [url, getYouTubeId]);
   const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
 
   return (
