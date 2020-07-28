@@ -7,7 +7,7 @@ interface Props {
 }
 
 const ButtonLink: React.FC<Props> = ({ href, children }) => {
-  return <Button href={href}>{children}</Button>;
+  return <Button to="/cadastro/video">{children}</Button>;
 };
 
 export default ButtonLink;
