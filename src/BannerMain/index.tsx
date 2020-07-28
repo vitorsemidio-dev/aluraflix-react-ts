@@ -3,6 +3,9 @@ import VideoIframeResponsive from './components/VideoIframeResponsive';
 import {
   BannerMainContainer,
   ContentAreaContainer,
+  Item,
+  Title,
+  Description,
   WatchButton,
 } from './styles';
 
@@ -29,18 +32,16 @@ const BannerMain: React.FC<Props> = ({ videoTitle, videoDescription, url }) => {
   return (
     <BannerMainContainer backgroundImage={bgUrl}>
       <ContentAreaContainer>
-        <ContentAreaContainer.Item>
-          <ContentAreaContainer.Title>{videoTitle}</ContentAreaContainer.Title>
+        <Item>
+          <Title>{videoTitle}</Title>
 
-          <ContentAreaContainer.Description>
-            {videoDescription}
-          </ContentAreaContainer.Description>
-        </ContentAreaContainer.Item>
+          <Description>{videoDescription}</Description>
+        </Item>
 
-        <ContentAreaContainer.Item>
+        <Item>
           <VideoIframeResponsive youtubeID={youTubeID} />
           <WatchButton>Assistir</WatchButton>
-        </ContentAreaContainer.Item>
+        </Item>
       </ContentAreaContainer>
     </BannerMainContainer>
   );
