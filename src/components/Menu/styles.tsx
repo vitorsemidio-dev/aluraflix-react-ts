@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const MenuContainer = styled.nav`
   height: 94px;
@@ -35,3 +36,5 @@ export const Logo = styled.img`
     }
   }
 `;
+
+export const ButtonLinkHome = styled(Link)``;
