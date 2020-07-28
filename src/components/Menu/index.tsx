@@ -16,7 +16,7 @@ const Menu: React.FC = () => {
           <Logo className="Logo" src={logo} alt="AluraFlix logo" />
         </a>
 
-        <ButtonLink href="/link">Styled Components Button</ButtonLink>
+        <ButtonLink href="/link">Novo Video</ButtonLink>
       </MenuContainer>
     </Body>
   );
