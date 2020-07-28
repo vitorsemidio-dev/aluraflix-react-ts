@@ -1,15 +1,10 @@
 import React from 'react';
-import Slider from 'react-slick';
 
+import Slider from './components/Slider';
 import { SliderItem } from './components/Slider/styles';
 import VideoCard from './components/VideoCard';
 
-import {
-  VideoCardGroupContainer,
-  VideoCardList,
-  Title,
-  ExtraLink,
-} from './styles';
+import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 
 interface Video {
   titulo: string;
