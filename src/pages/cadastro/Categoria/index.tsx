@@ -6,11 +6,18 @@ import PageDefault from '../../../components/PageDefault';
 const Categoria: React.FC = () => {
   return (
     <PageDefault>
-      <div>
-        <h1>Cadastro Categoria</h1>
+      <h1>Cadastro de Categoria</h1>
 
-        <Link to="/">Ir para home</Link>
-      </div>
+      <form>
+        <label htmlFor="categoria">
+          Nome da Categoria:
+          <input id="categoria" type="text" />
+        </label>
+
+        <button type="button">Cadastrar</button>
+      </form>
+
+      <Link to="/">Ir para home</Link>
     </PageDefault>
   );
 };
