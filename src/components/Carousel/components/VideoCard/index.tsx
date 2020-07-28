@@ -13,15 +13,12 @@ const VideoCard: React.FC<VideoCardProps> = ({
   videoURL,
   categoryColor,
 }) => {
-  const getYouTubeId = useCallback(
-    (youtubeURL: string) => {
-      return youtubeURL.replace(
-        /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
-        '$7',
-      );
-    },
-    [videoURL],
-  );
+  const getYouTubeId = useCallback((youtubeURL: string) => {
+    return youtubeURL.replace(
+      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
+      '$7',
+    );
+  }, []);
 
   const image = `https://img.youtube.com/vi/${getYouTubeId(
     videoURL,
