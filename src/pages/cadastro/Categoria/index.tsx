@@ -5,16 +5,44 @@ import PageDefault from '../../../components/PageDefault';
 
 const Categoria: React.FC = () => {
   const [novaCategoria, setNovaCategoria] = useState('');
+  const [cor, setCor] = useState('#000000');
+  const [descricao, setDescricao] = useState('');
   const [listaCategorias, setListaCategorias] = useState<string[]>([]);
 
-  function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
-    const newCategoria = event.target.value;
+  function handleInputCategoriaChange(
+    eventCategoria: React.ChangeEvent<HTMLInputElement>,
+  ) {
+    const newCategoria = eventCategoria.target.value;
     setNovaCategoria(newCategoria);
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  function handleSelectCor(eventCor: React.ChangeEvent<HTMLInputElement>) {
+    const {
+      target: { value },
+    } = eventCor;
+
+    setCor(value);
+  }
+
+  function handleTextareaDescricaoChange(
+    eventDescricao: React.ChangeEvent<HTMLTextAreaElement>,
+  ) {
+    const {
+      target: { value },
+    } = eventDescricao;
+
+    setDescricao(value);
+  }
+
+  function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
+    eventSubmit.preventDefault();
     setListaCategorias([...listaCategorias, novaCategoria]);
+    const categoria = {
+      novaCategoria,
+      cor,
+      descricao,
+    };
+    console.log(categoria);
     setNovaCategoria('');
   }
 
@@ -23,15 +51,42 @@ const Categoria: React.FC = () => {
       <h1>Cadastro de Categoria</h1>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="categoria">
-          Nome da Categoria:
-          <input
-            id="categoria"
-            type="text"
-            value={novaCategoria}
-            onChange={handleInput}
-          />
-        </label>
+        <div>
+          <label htmlFor="categoria">
+            Nome da Categoria:
+            <input
+              id="categoria"
+              type="text"
+              value={novaCategoria}
+              onChange={handleInputCategoriaChange}
+            />
+          </label>
+        </div>
+
+        <div>
+          <label htmlFor="descricao">
+            Descrição:
+            <textarea
+              id="descricao"
+              name="descricao"
+              value={descricao}
+              onChange={handleTextareaDescricaoChange}
+            />
+          </label>
+        </div>
+
+        <div>
+          <label htmlFor="cor">
+            Cor:
+            <input
+              type="color"
+              id="cor"
+              name="cor"
+              value={cor}
+              onChange={handleSelectCor}
+            />
+          </label>
+        </div>
 
         <button type="submit">Cadastrar</button>
       </form>
