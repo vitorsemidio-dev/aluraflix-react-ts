@@ -20,31 +20,6 @@ const Categoria: React.FC = () => {
   const [descricao, setDescricao] = useState('');
   const [listaCategorias, setListaCategorias] = useState<string[]>([]);
 
-  function handleInputCategoriaChange(
-    eventCategoria: React.ChangeEvent<HTMLInputElement>,
-  ) {
-    const newCategoria = eventCategoria.target.value;
-    setNovaCategoria(newCategoria);
-  }
-
-  function handleSelectCor(eventCor: React.ChangeEvent<HTMLInputElement>) {
-    const {
-      target: { value },
-    } = eventCor;
-
-    setCor(value);
-  }
-
-  function handleTextareaDescricaoChange(
-    eventDescricao: React.ChangeEvent<HTMLTextAreaElement>,
-  ) {
-    const {
-      target: { value },
-    } = eventDescricao;
-
-    setDescricao(value);
-  }
-
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();
     setListaCategorias([...listaCategorias, novaCategoria]);
@@ -57,18 +32,16 @@ const Categoria: React.FC = () => {
     setNovaCategoria('');
   }
 
-  function onChange(event: any) {
-    const a = event.target.getAttribute('name');
-    console.log(a);
-    // const tmpCategory = {
-    //   ...category,
-    //   [chave]: value,
-    // };
-    // console.log(tmpCategory);
-    // setCategory({
-    //   ...category,
-    //   [chave]: value,
-    // });
+  function onChange(
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) {
+    const key = event.target.getAttribute('name') || '';
+    const { value } = event.target;
+    console.log(category);
+    setCategory({
+      ...category,
+      [key]: value,
+    });
   }
 
   return (
