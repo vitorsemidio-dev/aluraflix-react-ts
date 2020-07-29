@@ -11,33 +11,28 @@ interface Category {
 
 const Categoria: React.FC = () => {
   const [category, setCategory] = useState<Category>({
-    name: 'Inicio',
-    color: '#ff44aa',
-    description: 'Description Inicio',
+    name: '',
+    color: '#000000',
+    description: '',
   });
-  const [novaCategoria, setNovaCategoria] = useState('');
-  const [cor, setCor] = useState('#000000');
-  const [descricao, setDescricao] = useState('');
-  const [listaCategorias, setListaCategorias] = useState<string[]>([]);
+
+  const [categories, setCategories] = useState<Category[]>([]);
 
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();
-    setListaCategorias([...listaCategorias, novaCategoria]);
-    const categoria = {
-      novaCategoria,
-      cor,
-      descricao,
-    };
-    console.log(categoria);
-    setNovaCategoria('');
+    setCategories([...categories, category]);
+    setCategory({
+      name: '',
+      color: '#000000',
+      description: '',
+    });
   }
 
-  function onChange(
+  function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     const key = event.target.getAttribute('name') || '';
     const { value } = event.target;
-    console.log(category);
     setCategory({
       ...category,
       [key]: value,
@@ -57,7 +52,7 @@ const Categoria: React.FC = () => {
               name="name"
               type="text"
               value={category.name}
-              onChange={onChange}
+              onChange={handleChange}
             />
           </label>
         </div>
@@ -69,7 +64,7 @@ const Categoria: React.FC = () => {
               id="description"
               name="description"
               value={category.description}
-              onChange={onChange}
+              onChange={handleChange}
             />
           </label>
         </div>
@@ -82,7 +77,7 @@ const Categoria: React.FC = () => {
               id="color"
               name="color"
               value={category.color}
-              onChange={onChange}
+              onChange={handleChange}
             />
           </label>
         </div>
@@ -91,8 +86,13 @@ const Categoria: React.FC = () => {
       </form>
 
       <ul>
-        {listaCategorias.map((categoria) => (
-          <li key={categoria}>{categoria}</li>
+        {categories.map((categoryItem, index) => (
+          <li key={String(index)}>
+            <h3 style={{ color: categoryItem.color }}>
+              {`${index + 1} - ${categoryItem.name}`}
+            </h3>
+            <p>Descrição: {categoryItem.description}</p>
+          </li>
         ))}
       </ul>
 
