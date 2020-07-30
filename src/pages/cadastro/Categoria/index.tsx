@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
 
 interface Category {
@@ -44,43 +45,30 @@ const Categoria: React.FC = () => {
       <h1>Cadastro de Categoria</h1>
 
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="categoria">
-            Nome da Categoria:
-            <input
-              id="categoria"
-              name="name"
-              type="text"
-              value={category.name}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-
-        <div>
-          <label htmlFor="description">
-            Descrição:
-            <textarea
-              id="description"
-              name="description"
-              value={category.description}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-
-        <div>
-          <label htmlFor="color">
-            Cor:
-            <input
-              type="color"
-              id="color"
-              name="color"
-              value={category.color}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
+        <FormField
+          fieldId="category"
+          type="input"
+          name="name"
+          value={category.name}
+          label="Nome da Categoria"
+          handleChange={handleChange}
+        />
+        <FormField
+          fieldId="description"
+          type="textarea"
+          name="description"
+          value={category.description}
+          label="Descrição"
+          handleChange={handleChange}
+        />
+        <FormField
+          fieldId="color"
+          type="color"
+          name="color"
+          value={category.color}
+          label="Cor"
+          handleChange={handleChange}
+        />
 
         <button type="submit">Cadastrar</button>
       </form>
