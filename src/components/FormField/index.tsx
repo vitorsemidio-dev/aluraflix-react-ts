@@ -42,7 +42,7 @@ const FormField: React.FC<Props> = ({
               onChange={handleChange}
             />
           )}
-          <LabelText>{label}:</LabelText>
+          <LabelText>{label}</LabelText>
         </Label>
       </FormFieldWrapper>
     </div>
