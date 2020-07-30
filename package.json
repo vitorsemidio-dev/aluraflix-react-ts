@@ -26,7 +26,9 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "server": "json-server --watch db.json --port 3333",
     "start": "react-scripts start",
+    "dev": "concurrently \"react-scripts start\" \"yarn server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -50,6 +52,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/react-slick": "^0.23.4",
     "@types/styled-components": "^5.1.1",
+    "concurrently": "^5.2.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-typescript": "^2.0.0",
