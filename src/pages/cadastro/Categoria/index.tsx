@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import FormField from '../../../components/FormField';
@@ -18,6 +18,14 @@ const Categoria: React.FC = () => {
   });
 
   const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    const API_URL = 'http://localhost:8080/categorias';
+    fetch(API_URL).then((response) => {
+      console.log(response.body);
+      console.log(response);
+    });
+  }, []);
 
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();

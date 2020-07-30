@@ -11,6 +11,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "axios": "^0.19.2",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.3.0",
@@ -26,7 +27,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "server": "json-server --watch db.json --port 3333",
+    "server": "json-server --watch db.json --port 8080",
     "start": "react-scripts start",
     "dev": "concurrently \"react-scripts start\" \"yarn server\"",
     "build": "react-scripts build",
