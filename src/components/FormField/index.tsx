@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormFieldWrapper, Label, LabelText, Input } from './styles';
+import { FormFieldWrapper, Label, LabelText, Input, TextArea } from './styles';
 
 interface Props {
   fieldId: string;
@@ -21,17 +21,27 @@ const FormField: React.FC<Props> = ({
   value,
   handleChange,
 }) => {
+  const isTextArea = type === 'textarea';
   return (
     <div>
       <FormFieldWrapper>
         <Label htmlFor={fieldId}>
-          <Input
-            id={fieldId}
-            type={type}
-            value={value}
-            name={name}
-            onChange={handleChange}
-          />
+          {isTextArea ? (
+            <TextArea
+              id={fieldId}
+              value={value}
+              name={name}
+              onChange={handleChange}
+            />
+          ) : (
+            <Input
+              id={fieldId}
+              type={type}
+              value={value}
+              name={name}
+              onChange={handleChange}
+            />
+          )}
           <LabelText>{label}:</LabelText>
         </Label>
       </FormFieldWrapper>

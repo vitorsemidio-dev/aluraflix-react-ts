@@ -32,7 +32,6 @@ const Categoria: React.FC = () => {
   function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
-    console.log('category');
     const key = event.target.getAttribute('name') || '';
     const { value } = event.target;
     setCategory({
