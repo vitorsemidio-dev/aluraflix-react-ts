@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
 
 interface Category {
@@ -97,6 +98,13 @@ const Categoria: React.FC = () => {
       </ul>
 
       <Link to="/">Ir para home</Link>
+      <FormField
+        type="input"
+        name="category"
+        value={category.name}
+        label="Nome da Categoria"
+        onChange={handleChange}
+      />
     </PageDefault>
   );
 };
