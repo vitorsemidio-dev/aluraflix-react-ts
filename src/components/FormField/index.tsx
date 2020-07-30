@@ -21,8 +21,6 @@ const FormField: React.FC<Props> = ({
   value,
   handleChange,
 }) => {
-  const tag = type;
-
   return (
     <div>
       <FormFieldWrapper>
