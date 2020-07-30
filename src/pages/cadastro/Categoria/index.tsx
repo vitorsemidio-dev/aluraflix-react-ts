@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import api from '../../../services/api';
+
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
 
@@ -20,10 +22,10 @@ const Categoria: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
-    const API_URL = 'http://localhost:8080/categorias';
-    fetch(API_URL).then((response) => {
-      console.log(response.body);
-      console.log(response);
+    api.get<Category[]>('/categorias').then((response) => {
+      const { data } = response;
+      console.log(response.data);
+      setCategories((oldValues) => [...oldValues, ...data]);
     });
   }, []);
 
