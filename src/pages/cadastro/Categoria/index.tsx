@@ -99,11 +99,28 @@ const Categoria: React.FC = () => {
 
       <Link to="/">Ir para home</Link>
       <FormField
+        fieldId="category"
         type="input"
         name="category"
         value={category.name}
         label="Nome da Categoria"
-        onChange={handleChange}
+        handleChange={handleChange}
+      />
+      <FormField
+        fieldId="description"
+        type="textarea"
+        name="category"
+        value={category.name}
+        label="Descrição"
+        handleChange={handleChange}
+      />
+      <FormField
+        fieldId="color"
+        type="color"
+        name="category"
+        value={category.color}
+        label="Cor"
+        handleChange={handleChange}
       />
     </PageDefault>
   );

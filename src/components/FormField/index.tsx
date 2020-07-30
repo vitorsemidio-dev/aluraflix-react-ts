@@ -3,26 +3,36 @@ import React from 'react';
 import { FormFieldWrapper, Label, LabelText, Input } from './styles';
 
 interface Props {
+  fieldId: string;
   label?: string;
   type?: 'input' | 'textarea' | 'color';
   name?: string;
   value?: any;
-  onChange: (event: any) => void;
+  handleChange: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
 }
 
-const FormField: React.FC<Props> = ({ label, type, name, value, onChange }) => {
+const FormField: React.FC<Props> = ({
+  fieldId,
+  label,
+  type,
+  name,
+  value,
+  handleChange,
+}) => {
   const tag = type;
 
   return (
     <div>
       <FormFieldWrapper>
-        <Label>
+        <Label htmlFor={fieldId}>
           <Input
-            as="input"
+            id={fieldId}
             type={type}
             value={value}
             name={name}
-            onChange={onChange}
+            onChange={handleChange}
           />
           <LabelText>{label}:</LabelText>
         </Label>
