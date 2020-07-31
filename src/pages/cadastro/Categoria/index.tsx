@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+import api from '../../../services/api';
 
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
@@ -18,6 +20,14 @@ const Categoria: React.FC = () => {
   });
 
   const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    api.get<Category[]>('/categorias').then((response) => {
+      const { data } = response;
+      console.log(response.data);
+      setCategories((oldValues) => [...oldValues, ...data]);
+    });
+  }, []);
 
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();
