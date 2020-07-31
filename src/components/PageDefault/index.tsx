@@ -5,7 +5,7 @@ import Footer from '../Footer';
 import Menu from '../Menu';
 
 interface Props {
-  isDashboard: boolean;
+  isDashboard?: boolean;
 }
 
 const Main = styled.main<Props>`
