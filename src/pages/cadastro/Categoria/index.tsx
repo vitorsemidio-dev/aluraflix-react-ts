@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import api from '../../../services/api';
+import useForm from '../../../hooks/useForm';
 
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
@@ -13,11 +14,15 @@ interface Category {
 }
 
 const Categoria: React.FC = () => {
-  const [category, setCategory] = useState<Category>({
+  const initialsValues = {
     name: '',
     color: '#000000',
     description: '',
-  });
+  };
+
+  const { values: category, handleChange, clearForm } = useForm<Category>(
+    initialsValues,
+  );
 
   const [categories, setCategories] = useState<Category[]>([]);
 
@@ -27,27 +32,12 @@ const Categoria: React.FC = () => {
       console.log(response.data);
       setCategories((oldValues) => [...oldValues, ...data]);
     });
-  }, []);
+  }, [setCategories]);
 
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();
     setCategories([...categories, category]);
-    setCategory({
-      name: '',
-      color: '#000000',
-      description: '',
-    });
-  }
-
-  function handleChange(
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) {
-    const key = event.target.getAttribute('name') || '';
-    const { value } = event.target;
-    setCategory({
-      ...category,
-      [key]: value,
-    });
+    clearForm();
   }
 
   return (
