@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-interface IHookForm {
-  handleSubmit: (eventSubmit: React.FormEvent<HTMLFormElement>) => void;
+interface IHookForm<T> {
   handleChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
   clearForm: () => void;
-  setValues: (key: string, value: string) => void;
+  values: T;
 }
 
-function useForm(initialValues: any): IHookForm {
+export default function useForm<T>(initialValues: T): IHookForm<T> {
+  const [values, setValues] = useState<T>(initialValues);
+
   function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
@@ -22,20 +23,12 @@ function useForm(initialValues: any): IHookForm {
   }
 
   function clearForm() {
-    setCategory(initialValues);
+    setValues(initialValues);
   }
 
-  function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
-    eventSubmit.preventDefault();
-    setCategories([...categories, category]);
-    setCategory(initialValues);
-  }
   return {
-    handleSubmit,
     handleChange,
-    categories,
-    category,
-    setCategories,
+    values,
     clearForm,
   };
 }
