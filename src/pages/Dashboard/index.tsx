@@ -38,16 +38,8 @@ const Dashboard: React.FC = () => {
   return (
     <div style={{ background: '#141414' }}>
       <PageDefault isDashboard>
-        {/* {dadosIniciais.map((categoryItem, index) => (
-          <Carousel
-            key={categoryItem.titulo}
-            ignoreFirstVideo={index === 0}
-            category={categoryItem}
-          />
-        ))} */}
-
         {dadosIniciais.map((categoryItem, index) => (
-          <div key={`${categoryItem.id}`}>
+          <React.Fragment key={`${categoryItem.id}`}>
             {index === 0 ? (
               <>
                 <BannerMain
@@ -61,32 +53,8 @@ const Dashboard: React.FC = () => {
             ) : (
               <Carousel category={categoryItem} />
             )}
-          </div>
+          </React.Fragment>
         ))}
-
-        {dadosIniciais.length > 125 && (
-          <>
-            <BannerMain
-              videoTitle={dadosIniciais[0].videos[0].titulo}
-              url={dadosIniciais[0].videos[0].url}
-              videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
-            />
-
-            <Carousel ignoreFirstVideo category={dadosIniciais[0]} />
-
-            {/* <Carousel category={dadosIniciais[1]} />
-
-        <Carousel category={dadosIniciais[2]} />
-
-        <Carousel category={dadosIniciais[3]} />
-
-        <Carousel category={dadosIniciais[4]} />
-
-        <Carousel category={dadosIniciais[5]} /> */}
-          </>
-        )}
-
-        {/* <Footer /> */}
       </PageDefault>
     </div>
   );
