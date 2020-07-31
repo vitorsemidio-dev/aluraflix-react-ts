@@ -5,6 +5,7 @@ import Menu from '../../components/Menu';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
+import PageDefault from '../../components/PageDefault';
 
 import api from '../../services/api';
 
@@ -37,7 +38,22 @@ const Dashboard: React.FC = () => {
     <div style={{ background: '#141414' }}>
       <Menu />
 
-      {dadosIniciais.length > 0 && (
+      {dadosIniciais.map((categoryItem, index) => (
+        <PageDefault key={`${categoryItem.titulo}_${categoryItem.cor}`}>
+          <BannerMain
+            videoTitle={dadosIniciais[0].videos[0].titulo}
+            url={dadosIniciais[0].videos[0].url}
+            videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
+          />
+
+          <Carousel
+            ignoreFirstVideo={index === 0}
+            category={dadosIniciais[0]}
+          />
+        </PageDefault>
+      ))}
+
+      {dadosIniciais.length > 125 && (
         <>
           <BannerMain
             videoTitle={dadosIniciais[0].videos[0].titulo}
@@ -59,7 +75,7 @@ const Dashboard: React.FC = () => {
         </>
       )}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
