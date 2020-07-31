@@ -5,6 +5,18 @@
       "name": "Front End",
       "description": "Clientes",
       "color": "#cbd1ff"
+    },
+    {
+      "id": 2,
+      "name": "Back End",
+      "description": "Clientes",
+      "color": "#cbd1ff"
+    },
+    {
+      "id": 3,
+      "name": "Mobile",
+      "description": "Clientes",
+      "color": "#cbd1ff"
     }
   ]
 }
