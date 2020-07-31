@@ -12,32 +12,21 @@ interface Category {
   description: string;
 }
 
-const Categoria: React.FC = () => {
-  const [category, setCategory] = useState<Category>({
-    name: '',
-    color: '#000000',
-    description: '',
-  });
+interface IHookForm {
+  handleSubmit: (eventSubmit: React.FormEvent<HTMLFormElement>) => void;
+  handleChange: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
+  categories: Category[];
+  category: Category;
+  setCategories: React.Dispatch<React.SetStateAction<Category[]>>;
+  clearForm: () => void;
+}
 
+function useForm(initialValues: Category): IHookForm {
   const [categories, setCategories] = useState<Category[]>([]);
 
-  useEffect(() => {
-    api.get<Category[]>('/categorias').then((response) => {
-      const { data } = response;
-      console.log(response.data);
-      setCategories((oldValues) => [...oldValues, ...data]);
-    });
-  }, []);
-
-  function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
-    eventSubmit.preventDefault();
-    setCategories([...categories, category]);
-    setCategory({
-      name: '',
-      color: '#000000',
-      description: '',
-    });
-  }
+  const [category, setCategory] = useState<Category>(initialValues);
 
   function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -49,6 +38,47 @@ const Categoria: React.FC = () => {
       [key]: value,
     });
   }
+
+  function clearForm() {
+    setCategory(initialValues);
+  }
+
+  function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
+    eventSubmit.preventDefault();
+    setCategories([...categories, category]);
+    setCategory(initialValues);
+  }
+  return {
+    handleSubmit,
+    handleChange,
+    categories,
+    category,
+    setCategories,
+    clearForm,
+  };
+}
+
+const Categoria: React.FC = () => {
+  const initialsValues = {
+    name: '',
+    color: '#000000',
+    description: '',
+  };
+  const {
+    handleSubmit,
+    handleChange,
+    categories,
+    category,
+    setCategories,
+  } = useForm(initialsValues);
+
+  useEffect(() => {
+    api.get<Category[]>('/categorias').then((response) => {
+      const { data } = response;
+      console.log(response.data);
+      setCategories((oldValues) => [...oldValues, ...data]);
+    });
+  }, [setCategories]);
 
   return (
     <PageDefault>
