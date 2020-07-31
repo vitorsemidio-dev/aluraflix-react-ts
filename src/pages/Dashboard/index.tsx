@@ -36,7 +36,7 @@ const Dashboard: React.FC = () => {
   }, [setDadosIniciais]);
   return (
     <div style={{ background: '#141414' }}>
-      <PageDefault>
+      <PageDefault isDashboard>
         {dadosIniciais.map((categoryItem, index) => (
           <Carousel
             key={categoryItem.titulo}
