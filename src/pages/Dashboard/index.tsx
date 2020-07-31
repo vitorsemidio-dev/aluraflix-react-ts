@@ -36,9 +36,8 @@ const Dashboard: React.FC = () => {
   }, [setDadosIniciais]);
   return (
     <div style={{ background: '#141414' }}>
-      <Menu />
-
-      {dadosIniciais.map((categoryItem, index) => (
+      <PageDefault>
+        {/* {dadosIniciais.map((categoryItem, index) => (
         <PageDefault key={`${categoryItem.titulo}_${categoryItem.cor}`}>
           <BannerMain
             videoTitle={dadosIniciais[0].videos[0].titulo}
@@ -51,19 +50,19 @@ const Dashboard: React.FC = () => {
             category={dadosIniciais[0]}
           />
         </PageDefault>
-      ))}
+      ))} */}
 
-      {dadosIniciais.length > 125 && (
-        <>
-          <BannerMain
-            videoTitle={dadosIniciais[0].videos[0].titulo}
-            url={dadosIniciais[0].videos[0].url}
-            videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
-          />
+        {dadosIniciais.length > 125 && (
+          <>
+            <BannerMain
+              videoTitle={dadosIniciais[0].videos[0].titulo}
+              url={dadosIniciais[0].videos[0].url}
+              videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
+            />
 
-          <Carousel ignoreFirstVideo category={dadosIniciais[0]} />
+            <Carousel ignoreFirstVideo category={dadosIniciais[0]} />
 
-          {/* <Carousel category={dadosIniciais[1]} />
+            {/* <Carousel category={dadosIniciais[1]} />
 
         <Carousel category={dadosIniciais[2]} />
 
@@ -72,10 +71,11 @@ const Dashboard: React.FC = () => {
         <Carousel category={dadosIniciais[4]} />
 
         <Carousel category={dadosIniciais[5]} /> */}
-        </>
-      )}
+          </>
+        )}
 
-      {/* <Footer /> */}
+        {/* <Footer /> */}
+      </PageDefault>
     </div>
   );
 };
