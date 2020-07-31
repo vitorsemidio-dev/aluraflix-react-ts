@@ -37,6 +37,14 @@ const Dashboard: React.FC = () => {
   return (
     <div style={{ background: '#141414' }}>
       <PageDefault>
+        {dadosIniciais.map((categoryItem, index) => (
+          <Carousel
+            key={categoryItem.titulo}
+            ignoreFirstVideo={index === 0}
+            category={categoryItem}
+          />
+        ))}
+
         {/* {dadosIniciais.map((categoryItem, index) => (
         <PageDefault key={`${categoryItem.titulo}_${categoryItem.cor}`}>
           <BannerMain
