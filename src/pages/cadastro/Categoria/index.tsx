@@ -12,48 +12,38 @@ interface Category {
   description: string;
 }
 
-interface IHookForm {
-  handleSubmit: (eventSubmit: React.FormEvent<HTMLFormElement>) => void;
+interface IHookForm<T> {
+  // handleSubmit: (eventSubmit: React.FormEvent<HTMLFormElement>) => void;
   handleChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
-  categories: Category[];
-  category: Category;
-  setCategories: React.Dispatch<React.SetStateAction<Category[]>>;
+  // setCategories: React.Dispatch<React.SetStateAction<T[]>>;
   clearForm: () => void;
+  values: T;
 }
 
-function useForm(initialValues: Category): IHookForm {
-  const [categories, setCategories] = useState<Category[]>([]);
-
-  const [category, setCategory] = useState<Category>(initialValues);
+function useForm<T>(initialValues: T): IHookForm<T> {
+  const [values, setValues] = useState<T>(initialValues);
 
   function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     const key = event.target.getAttribute('name') || '';
     const { value } = event.target;
-    setCategory({
-      ...category,
+    setValues({
+      ...values,
       [key]: value,
     });
   }
 
   function clearForm() {
-    setCategory(initialValues);
+    setValues(initialValues);
   }
 
-  function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
-    eventSubmit.preventDefault();
-    setCategories([...categories, category]);
-    setCategory(initialValues);
-  }
   return {
-    handleSubmit,
+    // handleSubmit,
     handleChange,
-    categories,
-    category,
-    setCategories,
+    values,
     clearForm,
   };
 }
@@ -64,13 +54,11 @@ const Categoria: React.FC = () => {
     color: '#000000',
     description: '',
   };
-  const {
-    handleSubmit,
-    handleChange,
-    categories,
-    category,
-    setCategories,
-  } = useForm(initialsValues);
+  const { values: category, handleChange, clearForm } = useForm<Category>(
+    initialsValues,
+  );
+
+  const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
     api.get<Category[]>('/categorias').then((response) => {
@@ -79,6 +67,12 @@ const Categoria: React.FC = () => {
       setCategories((oldValues) => [...oldValues, ...data]);
     });
   }, [setCategories]);
+
+  function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
+    eventSubmit.preventDefault();
+    setCategories([...categories, category]);
+    clearForm();
+  }
 
   return (
     <PageDefault>
