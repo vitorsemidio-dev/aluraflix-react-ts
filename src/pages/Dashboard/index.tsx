@@ -19,6 +19,7 @@ interface LinkExtra {
   url: string;
 }
 interface Category {
+  id?: string;
   titulo: string;
   cor: string;
   link?: string;
@@ -37,28 +38,31 @@ const Dashboard: React.FC = () => {
   return (
     <div style={{ background: '#141414' }}>
       <PageDefault isDashboard>
-        {dadosIniciais.map((categoryItem, index) => (
+        {/* {dadosIniciais.map((categoryItem, index) => (
           <Carousel
             key={categoryItem.titulo}
             ignoreFirstVideo={index === 0}
             category={categoryItem}
           />
+        ))} */}
+
+        {dadosIniciais.map((categoryItem, index) => (
+          <div key={`${categoryItem.id}`}>
+            {index === 0 ? (
+              <>
+                <BannerMain
+                  videoTitle={dadosIniciais[0].videos[0].titulo}
+                  url={dadosIniciais[0].videos[0].url}
+                  videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
+                />
+
+                <Carousel ignoreFirstVideo category={categoryItem} />
+              </>
+            ) : (
+              <Carousel category={categoryItem} />
+            )}
+          </div>
         ))}
-
-        {/* {dadosIniciais.map((categoryItem, index) => (
-        <PageDefault key={`${categoryItem.titulo}_${categoryItem.cor}`}>
-          <BannerMain
-            videoTitle={dadosIniciais[0].videos[0].titulo}
-            url={dadosIniciais[0].videos[0].url}
-            videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
-          />
-
-          <Carousel
-            ignoreFirstVideo={index === 0}
-            category={dadosIniciais[0]}
-          />
-        </PageDefault>
-      ))} */}
 
         {dadosIniciais.length > 125 && (
           <>
