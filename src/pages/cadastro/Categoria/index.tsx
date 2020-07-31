@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import api from '../../../services/api';
+import useForm from '../../../hooks/useForm';
 
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
@@ -10,39 +11,6 @@ interface Category {
   name: string;
   color: string;
   description: string;
-}
-
-interface IHookForm<T> {
-  handleChange: (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => void;
-  clearForm: () => void;
-  values: T;
-}
-
-function useForm<T>(initialValues: T): IHookForm<T> {
-  const [values, setValues] = useState<T>(initialValues);
-
-  function handleChange(
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) {
-    const key = event.target.getAttribute('name') || '';
-    const { value } = event.target;
-    setValues({
-      ...values,
-      [key]: value,
-    });
-  }
-
-  function clearForm() {
-    setValues(initialValues);
-  }
-
-  return {
-    handleChange,
-    values,
-    clearForm,
-  };
 }
 
 const Categoria: React.FC = () => {
