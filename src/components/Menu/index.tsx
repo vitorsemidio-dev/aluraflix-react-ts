@@ -16,7 +16,7 @@ const Menu: React.FC = () => {
           <Logo className="Logo" src={logo} alt="AluraFlix logo" />
         </ButtonLinkHome>
 
-        <ButtonLink to="/cadastro/video">Novo Video</ButtonLink>
+        <ButtonLink to="/cadastro/video">Cadastrar Novo Video</ButtonLink>
       </MenuContainer>
     </>
   );
