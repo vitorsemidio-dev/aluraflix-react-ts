@@ -1,5 +1,5 @@
-/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-console */
 const jsonServer = require('json-server');
 
 const server = jsonServer.create();
