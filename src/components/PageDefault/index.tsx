@@ -19,6 +19,7 @@ const Main = styled.main<Props>`
     isDashboard &&
     css`
       padding: 0;
+      background: #141414;
     `}
 `;
 
