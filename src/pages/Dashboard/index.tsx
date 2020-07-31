@@ -36,14 +36,14 @@ const Dashboard: React.FC = () => {
     });
   }, [setDadosIniciais]);
   return (
-    <PageDefault isDashboard style={{ background: '#141414' }}>
+    <PageDefault isDashboard>
       {dadosIniciais.map((categoryItem, index) => (
         <React.Fragment key={`${categoryItem.id}`}>
           {index === 0 ? (
             <>
               <BannerMain
-                videoTitle={dadosIniciais[0].videos[0].titulo}
-                url={dadosIniciais[0].videos[0].url}
+                videoTitle={categoryItem.videos[0].titulo}
+                url={categoryItem.videos[0].url}
                 videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
               />
 
