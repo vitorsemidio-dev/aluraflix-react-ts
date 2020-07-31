@@ -13,11 +13,9 @@ interface Category {
 }
 
 interface IHookForm<T> {
-  // handleSubmit: (eventSubmit: React.FormEvent<HTMLFormElement>) => void;
   handleChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
-  // setCategories: React.Dispatch<React.SetStateAction<T[]>>;
   clearForm: () => void;
   values: T;
 }
@@ -41,7 +39,6 @@ function useForm<T>(initialValues: T): IHookForm<T> {
   }
 
   return {
-    // handleSubmit,
     handleChange,
     values,
     clearForm,
@@ -54,6 +51,7 @@ const Categoria: React.FC = () => {
     color: '#000000',
     description: '',
   };
+
   const { values: category, handleChange, clearForm } = useForm<Category>(
     initialsValues,
   );
