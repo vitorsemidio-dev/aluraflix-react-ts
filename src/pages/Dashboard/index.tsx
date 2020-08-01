@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
   return (
     <PageDefault isDashboard>
       {dadosIniciais.map((categoryItem, index) => (
-        <React.Fragment key={`${categoryItem.id}`}>
+        <React.Fragment key={`${categoryItem.id}_${categoryItem.cor}_${index}`}>
           {index === 0 ? (
             <>
               <BannerMain
@@ -46,11 +46,15 @@ const Dashboard: React.FC = () => {
                 url={categoryItem.videos[0].url}
                 videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
               />
+              <p>{`${categoryItem.id}_${categoryItem.cor}_${index}`}</p>
 
               <Carousel ignoreFirstVideo category={categoryItem} />
             </>
           ) : (
-            <Carousel category={categoryItem} />
+            <>
+              {`${categoryItem.id}_${categoryItem.cor}_${index}`}
+              <Carousel category={categoryItem} />
+            </>
           )}
         </React.Fragment>
       ))}

@@ -20,6 +20,7 @@ const Video: React.FC = () => {
   });
 
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
+    eventSubmit.preventDefault();
     history.push('/');
   }
   return (
@@ -53,6 +54,8 @@ const Video: React.FC = () => {
           label="Nome da Categoria"
           handleChange={handleChange}
         />
+
+        <button type="submit">Cadastrar</button>
       </form>
 
       <Link to="/cadastro/categoria">Cadastrar Categoria</Link>
