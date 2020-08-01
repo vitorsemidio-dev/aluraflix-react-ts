@@ -8,6 +8,15 @@
         "text": "Faça seu dinheiro cuidar de você",
         "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
       }
+    },
+    {
+      "id": 2,
+      "titulo": "NathAção",
+      "cor": "#b6e664",
+      "link_extra": {
+        "text": "Mundo das ações",
+        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+      }
     }
   ],
   "videos": [
@@ -52,6 +61,25 @@
       "categoriaId": 1,
       "titulo": "3 Segredos da Mente Universitária Milionária",
       "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+    },
+
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "titulo": "TOP 5 AÇÕES QUE MAIS VALORIZARAM NA QUARENTENA! (Alta de mais de 130%???)",
+      "url": "https://www.youtube.com/watch?v=Qm25cdjSqA0"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "5 PASSOS PRA INVESTIR EM AÇÕES! Entrar agora na Bolsa ou esperar?",
+      "url": "https://www.youtube.com/watch?v=F53-_i9fr-0"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "COMO GANHAR DINHEIRO COM AÇÕES? APENAS PARA INICIANTES",
+      "url": "https://www.youtube.com/watch?v=0xsFhL9sXxo"
     }
 
   ]
