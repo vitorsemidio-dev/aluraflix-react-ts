@@ -9,7 +9,7 @@ import api from '../../../services/api';
 interface Video {
   titulo: string;
   url: string;
-  categoria?: string;
+  categoria?: string | number | undefined;
 }
 
 interface LinkExtra {
@@ -51,22 +51,21 @@ const Video: React.FC = () => {
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();
 
-    console.log(values);
-    console.log(categories);
     const categorySelect = categories.find(
       (categoryItem) => categoryItem.titulo === values.categoria,
     );
-    console.log(categorySelect);
 
-    // api
-    //   .post('/videos', {
-    //     titulo: values.titulo,
-    //     url: values.url,
-    //     categoriaId: 1,
-    //   })
-    //   .then(() => {
-    //     history.push('/');
-    //   });
+    const categoriaId = categorySelect ? categorySelect.id : 1;
+
+    api
+      .post<Video>('/videos', {
+        titulo: values.titulo,
+        url: values.url,
+        categoriaId,
+      })
+      .then(() => {
+        history.push('/');
+      });
   }
   return (
     <PageDefault>
