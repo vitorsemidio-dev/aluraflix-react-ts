@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
+import api from '../../../services/api';
+
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
+import ButtonSubmit from '../../../components/ButtonSubmit';
 import useForm from '../../../hooks/useForm';
-import api from '../../../services/api';
 
 interface Video {
   titulo: string;
@@ -40,11 +42,9 @@ const Video: React.FC = () => {
   useEffect(() => {
     api.get<Category[]>('/categorias').then((response) => {
       const { data } = response;
-      console.log(data);
       const titles = data.map((categoryItem) => categoryItem.titulo);
       setCategories(data);
       setCategoriesTitle([...titles]);
-      console.log(titles);
     });
   }, []);
 
@@ -100,7 +100,7 @@ const Video: React.FC = () => {
           suggestions={categoriesTitle}
         />
 
-        <button type="submit">Cadastrar</button>
+        <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
       </form>
 
       <Link to="/cadastro/categoria">Cadastrar Categoria</Link>
