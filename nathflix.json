@@ -15,7 +15,16 @@
       "cor": "#b6e664",
       "link_extra": {
         "text": "Mundo das ações",
-        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+        "url": "https://www.youtube.com/watch?v=Qm25cdjSqA0"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Para Sobrar Dinheiro",
+      "cor": "#f4a63d",
+      "link_extra": {
+        "text": "Dinheirinho Extra",
+        "url": "https://www.youtube.com/watch?v=ucGORMF-Aro"
       }
     }
   ],
@@ -80,6 +89,38 @@
       "categoriaId": 2,
       "titulo": "COMO GANHAR DINHEIRO COM AÇÕES? APENAS PARA INICIANTES",
       "url": "https://www.youtube.com/watch?v=0xsFhL9sXxo"
+    },
+
+
+    {
+      "id": 8,
+      "categoriaId": 3,
+      "titulo": "5 Caminhos POSSÍVEIS pra quem PERDEU O EMPREGO na pandemia! (Não é receita mágica!)",
+      "url": "https://www.youtube.com/watch?v=ucGORMF-Aro"
+    },
+    {
+      "id": 9,
+      "categoriaId": 3,
+      "titulo": "Como GANHAR DINHEIRO com o WhatsApp e o Instagram? Passo a passo pra você usar direito!",
+      "url": "https://www.youtube.com/watch?v=iuB5B1SXaH4"
+    },
+    {
+      "id": 10,
+      "categoriaId": 3,
+      "titulo": "COMO eu ganhei R$45 MIL EM TRÊS HORAS: a compra do meu apartamento à vista",
+      "url": "https://www.youtube.com/watch?v=t7n7Kn7ujh4"
+    },
+    {
+      "id": 9,
+      "categoriaId": 3,
+      "titulo": "10 DICAS PRA ECONOMIZAR MUITO MAIS no supermercado! Economize R$1.440 com isso!",
+      "url": "https://www.youtube.com/watch?v=dkQNvaRZyKs"
+    },
+    {
+      "id": 10,
+      "categoriaId": 3,
+      "titulo": "NÃO pague NUNCA MAIS POR ESSAS 3 TARIFAS! Economizei MUITO dinheiro com isso",
+      "url": "https://www.youtube.com/watch?v=5Jxv-U9bypo"
     }
 
   ]
