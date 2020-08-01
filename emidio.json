@@ -1,0 +1,151 @@
+{
+  "categorias":  [
+    {
+      "id": 1,
+      "titulo": "Gabi Xavier",
+      "cor": "#ff2875",
+      "link_extra": {
+        "text": "Oi, eu sou Gabi Xavier",
+        "url": "https://www.youtube.com/watch?v=UsdVE0OH15c"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Me Poupe",
+      "cor": "#3a2875",
+      "link_extra": {
+        "text": "Ah! Que festa da riqueza",
+        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Primo Rico",
+      "cor": "#fb3505",
+      "link_extra": {
+        "text": "Salve, Primos e Primas",
+        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Comentando ANIMES MAIS POPULARES em 2020!",
+      "url": "https://www.youtube.com/watch?v=aRVXYDYNv1Y"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "CAOS COMPLETO e EREN REVELADO! Capítulo 130 SHINGEKI NO KYOJIN",
+      "url": "https://www.youtube.com/watch?v=XJQCMSFVgVo"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "YU YU HAKUSHO MELHOR ANIME DO MUNDO! Por que Assistir?!",
+      "url": "https://www.youtube.com/watch?v=fVu7ufSNmjg"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "ANIME PRA CHOCAR E REFLETIR! Entendendo PARASYTE!",
+      "url": "https://www.youtube.com/watch?v=69KverozcIA"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "PROMISED NEVERLAND ACABOU e... Decepcionou?",
+      "url": "https://www.youtube.com/watch?v=Yvu7_kHnjm0"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "DEMON SLAYER FOI BOM OU NÃO? Análise Completa até o FINAL!",
+      "url": "https://www.youtube.com/watch?v=LOWqPHTcJyQ"
+    },
+
+
+    {
+      "id": 7,
+      "categoriaId": 2,
+      "titulo": "3 Segredos da Mente Universitária Milionária",
+      "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+    },
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "titulo": "TOP 5 AÇÕES QUE MAIS VALORIZARAM NA QUARENTENA! (Alta de mais de 130%???)",
+      "url": "https://www.youtube.com/watch?v=Qm25cdjSqA0"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "5 PASSOS PRA INVESTIR EM AÇÕES! Entrar agora na Bolsa ou esperar?",
+      "url": "https://www.youtube.com/watch?v=F53-_i9fr-0"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "COMO GANHAR DINHEIRO COM AÇÕES? APENAS PARA INICIANTES",
+      "url": "https://www.youtube.com/watch?v=0xsFhL9sXxo"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "titulo": "5 Caminhos POSSÍVEIS pra quem PERDEU O EMPREGO na pandemia! (Não é receita mágica!)",
+      "url": "https://www.youtube.com/watch?v=ucGORMF-Aro"
+    },
+    {
+      "id": 12,
+      "categoriaId": 2,
+      "titulo": "Como GANHAR DINHEIRO com o WhatsApp e o Instagram? Passo a passo pra você usar direito!",
+      "url": "https://www.youtube.com/watch?v=iuB5B1SXaH4"
+    },
+    {
+      "id": 13,
+      "categoriaId": 2,
+      "titulo": "COMO eu ganhei R$45 MIL EM TRÊS HORAS: a compra do meu apartamento à vista",
+      "url": "https://www.youtube.com/watch?v=t7n7Kn7ujh4"
+    },
+    {
+      "id": 14,
+      "categoriaId": 2,
+      "titulo": "10 DICAS PRA ECONOMIZAR MUITO MAIS no supermercado! Economize R$1.440 com isso!",
+      "url": "https://www.youtube.com/watch?v=dkQNvaRZyKs"
+    },
+
+
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "ITAUSA (ITSA4) ESTÁ BARATA? | Calculando o PREÇO JUSTO de uma ação NA PRÁTICA!",
+      "url": "https://www.youtube.com/watch?v=GyEVGyCa5xk"
+    },
+    {
+      "id": 16,
+      "categoriaId": 3,
+      "titulo": "6 COISAS QUE VOCÊ NÃO DEVE PERDER SEU TEMPO! (mas que você pode estar perdendo)",
+      "url": "https://www.youtube.com/watch?v=TvLL4fGia9E"
+    },
+    {
+      "id": 17,
+      "categoriaId": 3,
+      "titulo": "POR QUE EU NUNCA MAIS VOU VOLTAR PRO ESCRITÓRIO?",
+      "url": "https://www.youtube.com/watch?v=tp7x_w7kOh0"
+    },
+    {
+      "id": 18,
+      "categoriaId": 3,
+      "titulo": "RUMO AO BILHÃO #17 | ZEREI MINHA POSIÇÃO EM UM FII! Ibovespa -16,8% e a carteira +2,55% em 2020?",
+      "url": "https://www.youtube.com/watch?v=Ygcz961MhDk"
+    },
+    {
+      "id": 19,
+      "categoriaId": 3,
+      "titulo": "7 PRINCIPIOS DO REI SALOMÃO: um dos homens mais SÁBIOS e RICOS da história!",
+      "url": "https://www.youtube.com/watch?v=alCOGCMRBvM"
+    }
+  ]
+}

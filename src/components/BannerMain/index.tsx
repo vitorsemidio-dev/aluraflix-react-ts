@@ -13,9 +13,15 @@ interface Props {
   videoTitle: string;
   videoDescription: string;
   url: string;
+  textStrokeColor?: string;
 }
 
-const BannerMain: React.FC<Props> = ({ videoTitle, videoDescription, url }) => {
+const BannerMain: React.FC<Props> = ({
+  videoTitle,
+  videoDescription,
+  url,
+  textStrokeColor = '#1c1c1c',
+}) => {
   const getYouTubeId = useCallback((youtubeURL: string) => {
     return youtubeURL.replace(
       /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
@@ -30,7 +36,7 @@ const BannerMain: React.FC<Props> = ({ videoTitle, videoDescription, url }) => {
     <BannerMainContainer backgroundImage={bgUrl}>
       <ContentAreaContainer>
         <Item>
-          <Title>{videoTitle}</Title>
+          <Title textStrokeColor={textStrokeColor}>{videoTitle}</Title>
 
           <Description>{videoDescription}</Description>
         </Item>

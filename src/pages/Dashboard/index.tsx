@@ -40,9 +40,10 @@ const Dashboard: React.FC = () => {
           {index === 0 ? (
             <>
               <BannerMain
+                textStrokeColor={categoryItem.cor}
                 videoTitle={categoryItem.videos[0].titulo}
                 url={categoryItem.videos[0].url}
-                videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
+                videoDescription={categoryItem.link_extra?.text || ''}
               />
 
               <Carousel ignoreFirstVideo category={categoryItem} />

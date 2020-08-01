@@ -35,9 +35,9 @@ const Video: React.FC = () => {
   const [categoriesTitle, setCategoriesTitle] = useState<string[]>([]);
 
   const { clearForm, values, handleChange } = useForm<Video>({
-    titulo: 'Video padrão',
-    url: 'https://www.youtube.com/watch?v=aRVXYDYNv1Y',
-    categoria: 'Front end',
+    titulo: '',
+    url: '',
+    categoria: '',
   });
 
   useEffect(() => {

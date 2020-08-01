@@ -1,0 +1,127 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Está perdido? Comece por aqui! NATHFLIX!",
+      "cor": "#3a2875",
+      "link_extra": {
+        "text": "Faça seu dinheiro cuidar de você",
+        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "NathAção",
+      "cor": "#b6e664",
+      "link_extra": {
+        "text": "Mundo das ações",
+        "url": "https://www.youtube.com/watch?v=Qm25cdjSqA0"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Para Sobrar Dinheiro",
+      "cor": "#f4a63d",
+      "link_extra": {
+        "text": "Dinheirinho Extra",
+        "url": "https://www.youtube.com/watch?v=ucGORMF-Aro"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Como começar a investir?",
+      "url": "https://www.youtube.com/watch?v=aGGYFxLdFMw"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "ONDE DEIXAR A RESERVA DE EMERGÊNCIA PÓS-COVID?",
+      "url": "https://www.youtube.com/watch?v=dokj_p3lU_0"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "10 SERVIÇOS QUE VOCÊ NÃO PRECISA PAGAR NA QUARENTENA!",
+      "url": "https://www.youtube.com/watch?v=jgTcZf1lFFo"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "COMO COMEÇAR UM NEGÓCIO DO ZERO E SEM DINHEIRO?",
+      "url": "https://www.youtube.com/watch?v=8tsmVSS9_30"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "3 ERROS QUE TE FAZEM TER DÍVIDAS! O PRIMEIRO você faz sem perceber!",
+      "url": "https://www.youtube.com/watch?v=OBNYXbCLWPA"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": " PERGUNTAS QUE TODA MULHER RICA FAZ! Você tem coragem de perguntar isso? Especial DIA DA MULHER",
+      "url": "https://www.youtube.com/watch?v=58PoU-ssRZ4"
+    },
+    {
+      "id": 7,
+      "categoriaId": 1,
+      "titulo": "3 Segredos da Mente Universitária Milionária",
+      "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+    },
+
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "titulo": "TOP 5 AÇÕES QUE MAIS VALORIZARAM NA QUARENTENA! (Alta de mais de 130%???)",
+      "url": "https://www.youtube.com/watch?v=Qm25cdjSqA0"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "5 PASSOS PRA INVESTIR EM AÇÕES! Entrar agora na Bolsa ou esperar?",
+      "url": "https://www.youtube.com/watch?v=F53-_i9fr-0"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "COMO GANHAR DINHEIRO COM AÇÕES? APENAS PARA INICIANTES",
+      "url": "https://www.youtube.com/watch?v=0xsFhL9sXxo"
+    },
+
+
+    {
+      "id": 11,
+      "categoriaId": 3,
+      "titulo": "5 Caminhos POSSÍVEIS pra quem PERDEU O EMPREGO na pandemia! (Não é receita mágica!)",
+      "url": "https://www.youtube.com/watch?v=ucGORMF-Aro"
+    },
+    {
+      "id": 12,
+      "categoriaId": 3,
+      "titulo": "Como GANHAR DINHEIRO com o WhatsApp e o Instagram? Passo a passo pra você usar direito!",
+      "url": "https://www.youtube.com/watch?v=iuB5B1SXaH4"
+    },
+    {
+      "id": 13,
+      "categoriaId": 3,
+      "titulo": "COMO eu ganhei R$45 MIL EM TRÊS HORAS: a compra do meu apartamento à vista",
+      "url": "https://www.youtube.com/watch?v=t7n7Kn7ujh4"
+    },
+    {
+      "id": 14,
+      "categoriaId": 3,
+      "titulo": "10 DICAS PRA ECONOMIZAR MUITO MAIS no supermercado! Economize R$1.440 com isso!",
+      "url": "https://www.youtube.com/watch?v=dkQNvaRZyKs"
+    },
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "NÃO pague NUNCA MAIS POR ESSAS 3 TARIFAS! Economizei MUITO dinheiro com isso",
+      "url": "https://www.youtube.com/watch?v=5Jxv-U9bypo"
+    }
+
+  ]
+}
