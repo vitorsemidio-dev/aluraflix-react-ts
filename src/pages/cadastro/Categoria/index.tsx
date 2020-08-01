@@ -9,15 +9,16 @@ import ButtonLink from '../../../components/Menu/ButtonLink';
 import ButtonSubmit from '../../../components/ButtonSubmit';
 
 interface Category {
-  name: string;
-  color: string;
+  id?: number | string | undefined;
+  titulo: string;
+  cor: string;
   description: string;
 }
 
 const Categoria: React.FC = () => {
   const initialsValues = {
-    name: '',
-    color: '#000000',
+    titulo: '',
+    cor: '#000000',
     description: '',
   };
 
@@ -50,7 +51,7 @@ const Categoria: React.FC = () => {
           fieldId="category"
           type="input"
           name="name"
-          value={category.name}
+          value={category.titulo}
           label="Nome da Categoria"
           handleChange={handleChange}
         />
@@ -66,7 +67,7 @@ const Categoria: React.FC = () => {
           fieldId="color"
           type="color"
           name="color"
-          value={category.color}
+          value={category.cor}
           label="Cor"
           handleChange={handleChange}
         />

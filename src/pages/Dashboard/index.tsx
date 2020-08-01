@@ -42,7 +42,7 @@ const Dashboard: React.FC = () => {
               <BannerMain
                 videoTitle={categoryItem.videos[0].titulo}
                 url={categoryItem.videos[0].url}
-                videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
+                videoDescription="Aprenda a cuidar do seu dinheiro hoje e deixe que ele cuide de você amanhã!"
               />
 
               <Carousel ignoreFirstVideo category={categoryItem} />

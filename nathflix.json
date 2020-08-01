@@ -1,0 +1,28 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Está perdido? Comece por aqui! NATHFLIX!",
+      "cor": "#3a2875",
+      "link_extra": {
+        "text": "Aprenda a cuidar do seu dinheiro hoje e deixe que ele cuide de você amanhã!",
+        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "3 Segredos da Mente Universitária Milionária",
+      "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "ONDE DEIXAR A RESERVA DE EMERGÊNCIA PÓS-COVID?",
+      "url": "https://www.youtube.com/watch?v=dokj_p3lU_0"
+    }
+
+  ]
+}
