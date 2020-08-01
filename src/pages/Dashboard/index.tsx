@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import Menu from '../../components/Menu';
 // import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
 import PageDefault from '../../components/PageDefault';
 
 import api from '../../services/api';
@@ -38,7 +36,7 @@ const Dashboard: React.FC = () => {
   return (
     <PageDefault isDashboard>
       {dadosIniciais.map((categoryItem, index) => (
-        <React.Fragment key={`${categoryItem.id}_${categoryItem.cor}_${index}`}>
+        <React.Fragment key={`${categoryItem.id}_${categoryItem.cor}`}>
           {index === 0 ? (
             <>
               <BannerMain
@@ -46,13 +44,11 @@ const Dashboard: React.FC = () => {
                 url={categoryItem.videos[0].url}
                 videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
               />
-              <p>{`${categoryItem.id}_${categoryItem.cor}_${index}`}</p>
 
               <Carousel ignoreFirstVideo category={categoryItem} />
             </>
           ) : (
             <>
-              {`${categoryItem.id}_${categoryItem.cor}_${index}`}
               <Carousel category={categoryItem} />
             </>
           )}

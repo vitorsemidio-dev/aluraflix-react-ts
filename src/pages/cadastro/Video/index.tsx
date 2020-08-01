@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
+import api from '../../../services/api';
 
 interface Video {
   titulo: string;
@@ -21,7 +22,17 @@ const Video: React.FC = () => {
 
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();
-    history.push('/');
+
+    console.log(values);
+    api
+      .post('/videos', {
+        titulo: values.titulo,
+        url: values.url,
+        categoriaId: 1,
+      })
+      .then(() => {
+        history.push('/');
+      });
   }
   return (
     <PageDefault>
