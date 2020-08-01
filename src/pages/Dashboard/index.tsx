@@ -40,6 +40,7 @@ const Dashboard: React.FC = () => {
           {index === 0 ? (
             <>
               <BannerMain
+                textStrokeColor={categoryItem.cor}
                 videoTitle={categoryItem.videos[0].titulo}
                 url={categoryItem.videos[0].url}
                 videoDescription="Aprenda a cuidar do seu dinheiro hoje e deixe que ele cuide de você amanhã!"

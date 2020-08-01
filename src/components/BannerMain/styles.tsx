@@ -51,13 +51,19 @@ export const Description = styled.p`
   }
 `;
 
-export const Title = styled.h2`
+interface TitleProps {
+  textStrokeColor?: string;
+}
+
+export const Title = styled.h2<TitleProps>`
   font-style: normal;
-  font-weight: 300;
-  font-size: 40px;
+  font-weight: 700;
+  font-size: 42px;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: ${({ textStrokeColor }) => textStrokeColor};
 
   @media (max-width: 800px) {
     font-size: 32px;
