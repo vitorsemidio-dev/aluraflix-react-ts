@@ -5,7 +5,7 @@
       "titulo": "Gabi Xavier",
       "cor": "#ff2875",
       "link_extra": {
-        "text": "Entretenimento e analises no mundo de animes",
+        "text": "Entretenimento no mundo de animes",
         "url": "https://www.youtube.com/watch?v=UsdVE0OH15c"
       }
     },
@@ -59,10 +59,52 @@
 
 
     {
-      "id": 2,
+      "id": 7,
+      "categoriaId": 2,
+      "titulo": "3 Segredos da Mente Universitária Milionária",
+      "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+    },
+    {
+      "id": 8,
       "categoriaId": 2,
       "titulo": "TOP 5 AÇÕES QUE MAIS VALORIZARAM NA QUARENTENA! (Alta de mais de 130%???)",
       "url": "https://www.youtube.com/watch?v=Qm25cdjSqA0"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "5 PASSOS PRA INVESTIR EM AÇÕES! Entrar agora na Bolsa ou esperar?",
+      "url": "https://www.youtube.com/watch?v=F53-_i9fr-0"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "COMO GANHAR DINHEIRO COM AÇÕES? APENAS PARA INICIANTES",
+      "url": "https://www.youtube.com/watch?v=0xsFhL9sXxo"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "titulo": "5 Caminhos POSSÍVEIS pra quem PERDEU O EMPREGO na pandemia! (Não é receita mágica!)",
+      "url": "https://www.youtube.com/watch?v=ucGORMF-Aro"
+    },
+    {
+      "id": 12,
+      "categoriaId": 2,
+      "titulo": "Como GANHAR DINHEIRO com o WhatsApp e o Instagram? Passo a passo pra você usar direito!",
+      "url": "https://www.youtube.com/watch?v=iuB5B1SXaH4"
+    },
+    {
+      "id": 13,
+      "categoriaId": 2,
+      "titulo": "COMO eu ganhei R$45 MIL EM TRÊS HORAS: a compra do meu apartamento à vista",
+      "url": "https://www.youtube.com/watch?v=t7n7Kn7ujh4"
+    },
+    {
+      "id": 14,
+      "categoriaId": 2,
+      "titulo": "10 DICAS PRA ECONOMIZAR MUITO MAIS no supermercado! Economize R$1.440 com isso!",
+      "url": "https://www.youtube.com/watch?v=dkQNvaRZyKs"
     }
   ]
 }

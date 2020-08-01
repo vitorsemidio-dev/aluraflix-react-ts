@@ -43,7 +43,7 @@ const Dashboard: React.FC = () => {
                 textStrokeColor={categoryItem.cor}
                 videoTitle={categoryItem.videos[0].titulo}
                 url={categoryItem.videos[0].url}
-                videoDescription="Aprenda a cuidar do seu dinheiro hoje e deixe que ele cuide de você amanhã!"
+                videoDescription={categoryItem.link_extra?.text || ''}
               />
 
               <Carousel ignoreFirstVideo category={categoryItem} />
