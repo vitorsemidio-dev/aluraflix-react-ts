@@ -7,6 +7,7 @@ import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
 import ButtonSubmit from '../../../components/ButtonSubmit';
 import useForm from '../../../hooks/useForm';
+import ButtonLink from '../../../components/Menu/ButtonLink';
 
 interface Video {
   titulo: string;
@@ -71,7 +72,7 @@ const Video: React.FC = () => {
     <PageDefault>
       <h1>Cadastro Video</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form style={{ marginBottom: 16 }} onSubmit={handleSubmit}>
         <FormField
           fieldId="video"
           label="Título do Vídeo"
@@ -103,7 +104,7 @@ const Video: React.FC = () => {
         <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
       </form>
 
-      <Link to="/cadastro/categoria">Cadastrar Categoria</Link>
+      <ButtonLink to="/cadastro/categoria">Cadastrar Categoria</ButtonLink>
     </PageDefault>
   );
 };
