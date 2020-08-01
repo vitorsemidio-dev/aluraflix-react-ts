@@ -1,0 +1,36 @@
+{
+  "categorias":  [
+    {
+      "id": 1,
+      "titulo": "Gabi Xavier",
+      "cor": "#ff2875",
+      "link_extra": {
+        "text": "Entretenimento e analises no mundo de animes",
+        "url": "https://www.youtube.com/watch?v=UsdVE0OH15c"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Me Poupe",
+      "cor": "#3a2875",
+      "link_extra": {
+        "text": "Faça seu dinheiro cuidar de você",
+        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "A MISSÃO FINAL COMEÇOU! Capítulo 126 SHINGEKI NO KYOJIN!",
+      "url": "https://www.youtube.com/watch?v=UsdVE0OH15c"
+    },
+    {
+      "id": 2,
+      "categoriaId": 2,
+      "titulo": "TOP 5 AÇÕES QUE MAIS VALORIZARAM NA QUARENTENA! (Alta de mais de 130%???)",
+      "url": "https://www.youtube.com/watch?v=Qm25cdjSqA0"
+    }
+  ]
+}
