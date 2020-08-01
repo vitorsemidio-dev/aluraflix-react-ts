@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import FormField from '../../../components/FormField';
@@ -27,6 +27,10 @@ interface Category {
 
 const Video: React.FC = () => {
   const history = useHistory();
+
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [categoriesTitle, setCategoriesTitle] = useState<string[]>([]);
+
   const { clearForm, values, handleChange } = useForm<Video>({
     titulo: 'Video padrão',
     url: 'https://www.youtube.com/watch?v=aRVXYDYNv1Y',
@@ -35,7 +39,11 @@ const Video: React.FC = () => {
 
   useEffect(() => {
     api.get<Category[]>('/categorias').then((response) => {
-      console.log(response.data);
+      const { data } = response;
+      console.log(data);
+      const titles = data.map((categoryItem) => categoryItem.titulo);
+      setCategoriesTitle([...titles]);
+      console.log(titles);
     });
   }, []);
 
@@ -77,13 +85,22 @@ const Video: React.FC = () => {
         />
 
         <FormField
-          fieldId="url"
+          fieldId="categoria"
           type="input"
-          name="url"
+          name="categoria"
           value={values.categoria}
           label="Nome da Categoria"
           handleChange={handleChange}
+          suggestions={categoriesTitle}
         />
+
+        {/* <datalist id="datalist">
+          {categories.map((categoryItem) => (
+            <option key={categoryItem.id} value={categoryItem.id}>
+              {categoryItem.titulo}
+            </option>
+          ))}
+        </datalist> */}
 
         <button type="submit">Cadastrar</button>
       </form>
