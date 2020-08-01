@@ -17,6 +17,15 @@
         "text": "Faça seu dinheiro cuidar de você",
         "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
       }
+    },
+    {
+      "id": 3,
+      "titulo": "Primo Rico",
+      "cor": "#fb3505",
+      "link_extra": {
+        "text": "Plante sua semente",
+        "url": "https://www.youtube.com/watch?v=MziFPb2SbUc"
+      }
     }
   ],
   "videos": [
@@ -105,6 +114,38 @@
       "categoriaId": 2,
       "titulo": "10 DICAS PRA ECONOMIZAR MUITO MAIS no supermercado! Economize R$1.440 com isso!",
       "url": "https://www.youtube.com/watch?v=dkQNvaRZyKs"
+    },
+
+
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "ITAUSA (ITSA4) ESTÁ BARATA? | Calculando o PREÇO JUSTO de uma ação NA PRÁTICA!",
+      "url": "https://www.youtube.com/watch?v=GyEVGyCa5xk"
+    },
+    {
+      "id": 16,
+      "categoriaId": 3,
+      "titulo": "6 COISAS QUE VOCÊ NÃO DEVE PERDER SEU TEMPO! (mas que você pode estar perdendo)",
+      "url": "https://www.youtube.com/watch?v=TvLL4fGia9E"
+    },
+    {
+      "id": 17,
+      "categoriaId": 3,
+      "titulo": "POR QUE EU NUNCA MAIS VOU VOLTAR PRO ESCRITÓRIO?",
+      "url": "https://www.youtube.com/watch?v=tp7x_w7kOh0"
+    },
+    {
+      "id": 18,
+      "categoriaId": 3,
+      "titulo": "RUMO AO BILHÃO #17 | ZEREI MINHA POSIÇÃO EM UM FII! Ibovespa -16,8% e a carteira +2,55% em 2020?",
+      "url": "https://www.youtube.com/watch?v=Ygcz961MhDk"
+    },
+    {
+      "id": 19,
+      "categoriaId": 3,
+      "titulo": "7 PRINCIPIOS DO REI SALOMÃO: um dos homens mais SÁBIOS e RICOS da história!",
+      "url": "https://www.youtube.com/watch?v=alCOGCMRBvM"
     }
   ]
 }
