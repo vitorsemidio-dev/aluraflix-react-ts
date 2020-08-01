@@ -42,6 +42,7 @@ const Video: React.FC = () => {
       const { data } = response;
       console.log(data);
       const titles = data.map((categoryItem) => categoryItem.titulo);
+      setCategories(data);
       setCategoriesTitle([...titles]);
       console.log(titles);
     });
@@ -51,15 +52,21 @@ const Video: React.FC = () => {
     eventSubmit.preventDefault();
 
     console.log(values);
-    api
-      .post('/videos', {
-        titulo: values.titulo,
-        url: values.url,
-        categoriaId: 1,
-      })
-      .then(() => {
-        history.push('/');
-      });
+    console.log(categories);
+    const categorySelect = categories.find(
+      (categoryItem) => categoryItem.titulo === values.categoria,
+    );
+    console.log(categorySelect);
+
+    // api
+    //   .post('/videos', {
+    //     titulo: values.titulo,
+    //     url: values.url,
+    //     categoriaId: 1,
+    //   })
+    //   .then(() => {
+    //     history.push('/');
+    //   });
   }
   return (
     <PageDefault>
@@ -93,14 +100,6 @@ const Video: React.FC = () => {
           handleChange={handleChange}
           suggestions={categoriesTitle}
         />
-
-        {/* <datalist id="datalist">
-          {categories.map((categoryItem) => (
-            <option key={categoryItem.id} value={categoryItem.id}>
-              {categoryItem.titulo}
-            </option>
-          ))}
-        </datalist> */}
 
         <button type="submit">Cadastrar</button>
       </form>
