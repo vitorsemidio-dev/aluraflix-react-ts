@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import FormField from '../../../components/FormField';
@@ -9,7 +9,20 @@ import api from '../../../services/api';
 interface Video {
   titulo: string;
   url: string;
-  categoria: string;
+  categoria?: string;
+}
+
+interface LinkExtra {
+  text: string;
+  url: string;
+}
+interface Category {
+  id?: string;
+  titulo: string;
+  cor: string;
+  link?: string;
+  link_extra?: LinkExtra;
+  videos: Video[];
 }
 
 const Video: React.FC = () => {
@@ -19,6 +32,12 @@ const Video: React.FC = () => {
     url: 'https://www.youtube.com/watch?v=aRVXYDYNv1Y',
     categoria: 'Front end',
   });
+
+  useEffect(() => {
+    api.get<Category[]>('/categorias').then((response) => {
+      console.log(response.data);
+    });
+  }, []);
 
   function handleSubmit(eventSubmit: React.FormEvent<HTMLFormElement>) {
     eventSubmit.preventDefault();
