@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import api from '../../../services/api';
 import useForm from '../../../hooks/useForm';
 
 import FormField from '../../../components/FormField';
 import PageDefault from '../../../components/PageDefault';
+import ButtonLink from '../../../components/Menu/ButtonLink';
+import ButtonSubmit from '../../../components/ButtonSubmit';
 
 interface Category {
   name: string;
@@ -44,7 +45,7 @@ const Categoria: React.FC = () => {
     <PageDefault>
       <h1>Cadastro de Categoria</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form style={{ marginBottom: 16 }} onSubmit={handleSubmit}>
         <FormField
           fieldId="category"
           type="input"
@@ -70,21 +71,10 @@ const Categoria: React.FC = () => {
           handleChange={handleChange}
         />
 
-        <button type="submit">Cadastrar</button>
+        <ButtonSubmit type="submit">Cadastrar</ButtonSubmit>
       </form>
 
-      <ul>
-        {categories.map((categoryItem, index) => (
-          <li key={String(index)}>
-            <h3 style={{ color: categoryItem.color }}>
-              {`${index + 1} - ${categoryItem.name}`}
-            </h3>
-            <p>Descrição: {categoryItem.description}</p>
-          </li>
-        ))}
-      </ul>
-
-      <Link to="/">Ir para home</Link>
+      <ButtonLink to="/">Ir para home</ButtonLink>
     </PageDefault>
   );
 };

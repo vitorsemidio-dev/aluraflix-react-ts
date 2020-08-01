@@ -11,6 +11,7 @@ interface Props {
   handleChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
+  suggestions?: string[];
 }
 
 const FormField: React.FC<Props> = ({
@@ -20,8 +21,10 @@ const FormField: React.FC<Props> = ({
   name,
   value,
   handleChange,
+  suggestions = [],
 }) => {
   const isTextArea = type === 'textarea';
+  const hasSuggestions = !!suggestions;
   return (
     <div>
       <FormFieldWrapper>
@@ -40,9 +43,23 @@ const FormField: React.FC<Props> = ({
               value={value}
               name={name}
               onChange={handleChange}
+              list={hasSuggestions ? `suggestionsFor_${fieldId}` : undefined}
+              autoComplete={hasSuggestions ? 'off' : 'on'}
             />
           )}
           <LabelText>{label}</LabelText>
+          {hasSuggestions && (
+            <datalist id={`suggestionsFor_${fieldId}`}>
+              {suggestions.map((suggestion) => (
+                <option
+                  key={`suggestionsFor_${fieldId}_option${suggestion}`}
+                  value={suggestion}
+                >
+                  {suggestion}
+                </option>
+              ))}
+            </datalist>
+          )}
         </Label>
       </FormFieldWrapper>
     </div>
